@@ -1,6 +1,7 @@
 package me.carda.awesome_notifications.core.managers;
 
 import android.content.Context;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -54,8 +55,12 @@ public class DefaultsManager {
     }
 
     public static DefaultsModel getDefaults(Context context) throws AwesomeNotificationsException {
+        Log.i("XXX", "[1] instance is null: " + (instance == null));
+
         if (instance == null)
             instance = shared.get(context, Definitions.SHARED_DEFAULTS, "Defaults");
+
+        Log.i("XXX", "[2] instance is null: " + (instance == null));
 
         return instance == null ? new DefaultsModel() : instance;
     }
