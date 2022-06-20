@@ -62,6 +62,11 @@ public class DefaultsManager {
 
         Log.i("XXX", "[2] instance is null: " + (instance == null));
 
+        Log.i("XXX", "-> appIcon is " + instance.appIcon);
+        Log.i("XXX", "-> silentDataCallback is " + instance.silentDataCallback);
+        Log.i("XXX", "-> reverseDartCallback is " + instance.reverseDartCallback);
+        Log.i("XXX", "-> backgroundHandleClass is " + instance.backgroundHandleClass);
+
         return instance == null ? new DefaultsModel() : instance;
     }
 
